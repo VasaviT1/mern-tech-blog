@@ -20,6 +20,9 @@ app.use(cors())
 
 app.use("/",IndexRoute)
 
+app.use('/storyImages', express.static(path.join(__dirname, 'public', 'storyImages')));
+app.use('/userPhotos', express.static(path.join(__dirname, 'public', 'userPhotos')));
+
 app.use(customErrorHandler)
 
 const PORT = process.env.PORT || 5000 ;
