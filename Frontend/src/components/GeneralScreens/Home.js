@@ -25,7 +25,7 @@ const Home = () => {
       setLoading(true)
       try {
 
-        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}${process.env.REACT_APP_API_URL}/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/story/getAllStories?search=${searchKey || ""}&page=${page}`)
 
         if (searchKey) {
           navigate({
